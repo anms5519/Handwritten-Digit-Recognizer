@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Handwritten Digit Recognizer</title>
+  </head>
+  <body>
+    <h1>Upload a Handwritten Digit Image</h1>
+    <form method="post" enctype="multipart/form-data">
+      <input type="file" name="image" accept="image/*" required>
+      <input type="submit" value="Recognize">
+    </form>
+    {% if prediction is not none %}
+      <h2>Predicted Digit: {{ prediction }}</h2>
+    {% endif %}
+  </body>
+</html>
